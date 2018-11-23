@@ -8,5 +8,11 @@ fi
 
 PROJECT_NAME=$1
 
-sed -i '' -e "s/djangoherokutemplate/${PROJECT_NAME}/g" djangoherokutemplate/settings.py djangoherokutemplate/urls.py djangoherokutemplate/wsgi.py manage.py
+sed -i '' -e "s/djangoherokutemplate/${PROJECT_NAME}/g" \
+djangoherokutemplate/settings.py \
+djangoherokutemplate/urls.py \
+djangoherokutemplate/wsgi.py \
+manage.py \
+pytest.ini
+
 mv djangoherokutemplate ${PROJECT_NAME}
