@@ -6,15 +6,29 @@
   "env": {
     "SECRET_KEY": {
       "generator": "secret"
-    },
-    "DEBUG": "True"
+    }
   },
   "formation": {
   },
   "addons": [
-
+      "heroku-postgresql:hobby-dev"
   ],
   "buildpacks": [
-
-  ]
+    {
+      "url": "heroku/python"
+    }
+  ],
+  "environments": {
+    "test": {
+      "scripts": {
+        "test": "pytest"
+      },
+      "env": {
+        "DEBUG": false,
+        "SECRET_KEY": {
+          "generator": "secret"
+        }
+      }
+    }
+  }
 }
