@@ -1,0 +1,20 @@
+{
+  "name": "django-heroku-template",
+  "scripts": {
+    "postdeploy": "python manage.py migrate"
+  },
+  "env": {
+    "SECRET_KEY": {
+      "generator": "secret"
+    },
+    "DEBUG": "True"
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
