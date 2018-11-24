@@ -13,6 +13,7 @@ djangoherokutemplate/settings.py \
 djangoherokutemplate/urls.py \
 djangoherokutemplate/wsgi.py \
 manage.py \
+Procfile \
 pytest.ini
 
 mv djangoherokutemplate ${PROJECT_NAME}
